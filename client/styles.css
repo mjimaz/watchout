@@ -2,11 +2,19 @@
 
 /* Note: an asteroid image is included in this repo.
 Feel free to use it if you like. */
-
+svg {
+  background-color: black;
+}
+/*svg{
+  border : border;
+}*/
 .enemy {
   /*cx:250;
-  cy:25;*/
-  r:10;
+  cy:25;
+  r:10;*/
+  height: 20px;
+  width: 20px;
+ 
 }
 .player {
   fill: red;
