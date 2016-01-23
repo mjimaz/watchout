@@ -17,6 +17,15 @@ var movingEnemies = function() {
                       .style('cy', function( d ){ return d[1] + 'px'; } );
 
 };
+var movePlayer = function() {
+  var coordinates = d3.mouse(this);
+  var x = coordinates[0];
+  var y = coordinates[1];
+  d3.select('.player')
+  .transition().duration(1)
+  .style("cx", x + 'px')
+  .style('cy', y + 'px');
+};
 
 var width = 500;
 var height = 500;
@@ -29,6 +38,13 @@ svg.selectAll('circle').data(randomPosition)
                  .style('cy', function( d ){ return d[1] + 'px'; } );
                  //.attr('xlink:href', 'asteroid.png');
 setInterval(movingEnemies, 1000);
+var player = d3.select('svg').append('circle')
+                             .attr('class','player')
+                             .style("cx", width / 2)
+                             .style('cy', height / 2);
+d3.select('svg').on('mousemove', movePlayer);
+                 
+
 
 
 

@@ -8,3 +8,7 @@ Feel free to use it if you like. */
   cy:25;*/
   r:10;
 }
+.player {
+  fill: red;
+  r: 10;
+}
